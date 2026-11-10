@@ -1,15 +1,18 @@
 {
-  "name": "ui",
+  "name": "@packages/ui",
   "version": "1.0.0",
   "private": true,
   "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./libs/*": "./src/libs/*.ts"
+  },
   "scripts": {
     "dev": "storybook dev -p 5200",
     "build": "storybook build"
   },
   "dependencies": {
-    "react": "^19.3.1",
-    "react-dom": "^19.3.1"
+    "classnames": "2.5.1"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "latest",
@@ -24,12 +27,17 @@
     "@vitejs/plugin-react": "^6.1.2",
     "@vitest/browser-playwright": "latest",
     "@vitest/coverage-v8": "latest",
-    "classnames": "2.5.1",
     "playwright": "latest",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
     "sass-embedded": "1.108.1",
     "storybook": "10.6.5",
     "typescript": "~7.0.2",
     "vite": "^8.3.6",
     "vitest": "latest"
+  },
+  "peerDependencies": {
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
   }
 }

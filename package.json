@@ -8,15 +8,15 @@
   ],
   "type": "module",
   "scripts": {
-    "start:ui": "pn --filter ui dev",
-    "build:ui": "pn --filter ui build",
+    "start:ui": "pn --filter @packages/ui dev",
+    "build:ui": "pn --filter @packages/ui build",
     "lint": "oxlint",
     "format": "oxfmt",
     "format:check": "oxfmt --check"
   },
-  "packageManager": "pnpm@12.18.0",
   "devDependencies": {
     "oxfmt": "^0.77.0",
     "oxlint": "^1.92.0"
-  }
+  },
+  "packageManager": "pnpm@12.18.0"
 }
