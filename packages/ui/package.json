@@ -5,10 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "storybook dev -p 5200",
-    "build": "storybook build",
-    "lint": "oxlint",
-    "fmt": "oxfmt",
-    "fmt:check": "oxfmt --check"
+    "build": "storybook build"
   },
   "dependencies": {
     "react": "^19.3.1",
@@ -28,8 +25,6 @@
     "@vitest/browser-playwright": "latest",
     "@vitest/coverage-v8": "latest",
     "classnames": "2.5.1",
-    "oxfmt": "^0.77.0",
-    "oxlint": "^1.90.0",
     "playwright": "latest",
     "sass-embedded": "1.108.1",
     "storybook": "10.6.5",
