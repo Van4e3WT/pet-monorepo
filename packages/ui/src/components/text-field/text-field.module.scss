@@ -1,0 +1,51 @@
+.input {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  min-height: 48px;
+  padding: 12px 14px;
+  border: 1px solid #d5d9e2;
+  border-radius: 12px;
+  outline: none;
+  background-color: #fff;
+  color: #202534;
+  font: inherit;
+  line-height: 1.4;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    background-color 160ms ease;
+
+  &::placeholder {
+    color: #9299a8;
+    opacity: 1;
+  }
+
+  &:hover:not(:disabled, :read-only) {
+    border-color: #a8b0c0;
+  }
+
+  &:focus-visible {
+    border-color: #6658e8;
+    box-shadow: 0 0 0 3px rgb(102 88 232 / 18%);
+  }
+
+  &[aria-invalid="true"] {
+    border-color: #d64545;
+
+    &:focus-visible {
+      box-shadow: 0 0 0 3px rgb(214 69 69 / 16%);
+    }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    border-color: #e2e5eb;
+    background-color: #f3f4f7;
+    color: #9299a8;
+  }
+
+  &:read-only {
+    background-color: #f8f9fb;
+  }
+}
