@@ -1,8 +1,40 @@
+@use "@packages/ui/styles/utils";
+
+.container {
+  @include utils.bgDecoration();
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card {
+  $maxWidth: 400px;
+
+  display: flex;
+  flex-direction: column;
+  gap: utils.pxToRem(24);
+  width: 100%;
+  max-width: $maxWidth;
+  padding: utils.pxToRem(24);
+  background-color: var(--bg-color);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 10px;
+
+  @media (min-width: $maxWidth) {
+    border-radius: 16px;
+  }
+}
+
+.title {
+  @include utils.fontH1();
+
+  text-align: center;
+}
+
 .form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin: 0 auto;
   width: 100%;
-  max-width: 400px;
 }

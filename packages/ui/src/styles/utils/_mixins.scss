@@ -1,0 +1,10 @@
+@use "./functions";
+
+@mixin bgDecoration() {
+  background-color: var(--bg-color);
+  background-image:
+    linear-gradient(to right, functions.varOpacity(--border-color, 25%) 1px, transparent 1px),
+    linear-gradient(to bottom, functions.varOpacity(--border-color, 25%) 1px, transparent 1px);
+  background-size: 24px 24px;
+  background-position: center;
+}

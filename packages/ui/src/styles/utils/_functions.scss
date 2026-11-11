@@ -1,9 +1,21 @@
 @use "sass:math";
 
+/// Функция для преобразования пикселей в rem
+/// @param {type} $px - значение в пикселях без единиц (например, 16)
+/// @param {Number} $base [16] - базовое значение для расчета rem (по умолчанию 16)
+/// @return {type} - значение в rem (например, 1rem)
 @function pxToRem($px, $base: 16) {
   @if not (math.is-unitless($px)) {
     @error "pxToRem: ожидается число без единиц";
   }
 
   @return math.div($px, $base) * 1rem;
+}
+
+/// Функция для получения цвета с заданной прозрачностью из CSS-переменной
+/// @param {type} $color - имя CSS-переменной цвета (например, --border-color)
+/// @param {type} $opacity - прозрачность в процентах (например, 25%)
+/// @return {type} - цвет с заданной прозрачностью
+@function varOpacity($color, $opacity) {
+  @return color-mix(in srgb, var($color) $opacity, transparent);
 }

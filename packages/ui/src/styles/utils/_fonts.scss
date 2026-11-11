@@ -1,0 +1,8 @@
+@use "./functions";
+
+@mixin fontH1() {
+  color: var(--text-title-color);
+  font-size: functions.pxToRem(32);
+  font-weight: bold;
+  line-height: 1.2;
+}
