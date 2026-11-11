@@ -8,9 +8,16 @@ export type ButtonProps = ComponentPropsWithRef<'button'> & {
   size?: 'small' | 'medium' | 'large';
 };
 
-export function Button({ variant = 'primary', size = 'medium', type = 'button', children, ...props }: ButtonProps) {
+export function Button({
+  variant = 'primary',
+  size = 'medium',
+  type = 'button',
+  className,
+  children,
+  ...props
+}: ButtonProps) {
   return (
-    <button type={type} className={cn(s.button, s[size], s[variant])} {...props}>
+    <button {...props} type={type} className={cn(s.button, s[size], s[variant], className)}>
       {children}
     </button>
   );

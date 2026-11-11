@@ -1,35 +1,38 @@
+@use "@packages/ui/styles/utils";
+
 .button {
   display: inline-block;
   border: 0;
-  border-radius: 3em;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1;
-  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   cursor: pointer;
 
   &.primary {
-    background-color: #555ab9;
-    color: white;
+    background-color: var(--bg-accent-color);
+    color: var(--text-primary-negative-color);
   }
 
   &.secondary {
     box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
     background-color: transparent;
-    color: #333;
+    color: var(--text-primary-color);
   }
 
   &.small {
-    padding: 10px 16px;
-    font-size: 12px;
+    padding: utils.pxToRem(8) utils.pxToRem(16);
+    border-radius: 8px;
+    font-size: utils.pxToRem(14);
   }
 
   &.medium {
-    padding: 11px 20px;
-    font-size: 14px;
+    padding: utils.pxToRem(10) utils.pxToRem(18);
+    border-radius: 10px;
+    font-size: utils.pxToRem(16);
   }
 
   &.large {
-    padding: 12px 24px;
-    font-size: 16px;
+    padding: utils.pxToRem(12) utils.pxToRem(20);
+    border-radius: 12px;
+    font-size: utils.pxToRem(18);
   }
 }
