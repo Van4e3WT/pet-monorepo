@@ -12,6 +12,14 @@ export default defineConfig({
     federation({
       name: 'account',
       filename: 'remoteEntry.js',
+      exposes: {
+        '.': './src/app/index.tsx',
+      },
+      dts: {
+        generateTypes: {
+          tsConfigPath: './tsconfig.app.json',
+        },
+      },
       shared: {
         react: { singleton: true },
         'react-dom': { singleton: true },

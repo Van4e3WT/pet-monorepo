@@ -12,7 +12,7 @@ export default defineConfig({
     federation({
       name: "web-host",
       remotes: {
-        remote: {
+        account: {
           type: "module",
           name: "account",
           entry: "http://localhost:5176/remoteEntry.js",

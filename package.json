@@ -8,6 +8,7 @@
   ],
   "type": "module",
   "scripts": {
+    "start:front": "pn --parallel --filter @apps/account --filter @apps/web-host dev",
     "start:ui": "pn --filter @packages/ui dev",
     "build:ui": "pn --filter @packages/ui build",
     "lint": "oxlint",
