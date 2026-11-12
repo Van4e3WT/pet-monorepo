@@ -1,6 +1,7 @@
 :root {
   /* ===== Text ===== */
-  --text-accent-color: #033e6b;
+  --text-accent-color: #012846;
+  --text-accent-selected-color: #033e6b;
   --text-accent-negative-color: #66a3d2;
   --text-disabled-color: #9c9c9c;
   --text-title-color: #272727;
@@ -8,12 +9,12 @@
   --text-primary-negative-color: #f3f3f3;
 
   /* ===== Background ===== */
-  --bg-accent-color: #0b61a4;
+  --bg-accent-color: #043e6b;
   --bg-disabled-color: #e0e0e0;
   --bg-color: #fafafa;
 
   /* ===== Border ===== */
   --border-color: #9c9c9c;
-  --border-accent-color: #3f92d2;
+  --border-accent-color: #145689;
   --border-error-color: #d64545;
 }

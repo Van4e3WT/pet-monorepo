@@ -38,3 +38,14 @@
   gap: 1rem;
   width: 100%;
 }
+
+.link {
+  text-align: center;
+  color: var(--text-accent-color);
+  transition: color ease-out 150ms;
+
+  &:hover {
+    color: var(--text-accent-selected-color);
+    text-decoration: none;
+  }
+}

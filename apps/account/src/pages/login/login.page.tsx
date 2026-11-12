@@ -1,4 +1,7 @@
 import { Button, TextField } from '@packages/ui';
+import { Link } from 'react-router';
+
+import { RoutePath } from '~/pages/routes';
 
 import s from './login.page.module.scss';
 
@@ -23,6 +26,9 @@ export default function LoginPage() {
             Вход
           </Button>
         </form>
+        <Link className={s.link} to={RoutePath.REGISTER}>
+          Регистрация
+        </Link>
       </div>
     </div>
   );

@@ -1,11 +1,13 @@
-import LoginPage from '~/pages/login';
+import type { RouterProviderProps } from 'react-router';
 
 import '@packages/ui/styles/base.scss';
+import { RouterProvider } from 'react-router/dom';
 
-export default function App() {
-  return (
-    <>
-      <LoginPage />
-    </>
-  );
+type Props = {
+  router: RouterProviderProps['router'];
+};
+
+export default function App({ router }: Props) {
+  // TODO: Завернуть в Error Boundary
+  return <RouterProvider router={router} />;
 }

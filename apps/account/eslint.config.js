@@ -26,6 +26,7 @@ export default defineConfig([
       globals: globals.browser,
     },
     rules: {
+      '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
       '@typescript-eslint/no-non-null-assertion': 'warn',
       '@typescript-eslint/no-unsafe-assignment': 'warn',
       '@typescript-eslint/no-unsafe-call': 'warn',
