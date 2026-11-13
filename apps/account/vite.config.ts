@@ -23,6 +23,9 @@ export default defineConfig({
       shared: {
         react: { singleton: true },
         'react-dom': { singleton: true },
+        'react-router': { singleton: true },
+        // Local packages
+        '@packages/ui': { singleton: true },
       },
     }),
   ],
