@@ -13,7 +13,7 @@ export default defineConfig({
       name: 'account',
       filename: 'remoteEntry.js',
       exposes: {
-        '.': './src/app/index.tsx',
+        './routes': './src/pages/routes.tsx',
       },
       dts: {
         generateTypes: {

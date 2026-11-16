@@ -1,6 +1,3 @@
-declare module 'account' {
-  import type { ComponentType } from 'react';
-
-  const AccountApp: ComponentType;
-  export default AccountApp;
+declare module 'account/routes' {
+  export const routesConfig: import('react-router').RouteObject[];
 }

@@ -1,13 +1,8 @@
-import type { RouterProviderProps } from 'react-router';
+import { createBrowserRouter, RouterProvider } from 'react-router';
 
 import '@packages/ui/styles/base.scss';
-import { RouterProvider } from 'react-router/dom';
+import { routesConfig } from '~/pages/routes';
 
-type Props = {
-  router: RouterProviderProps['router'];
-};
-
-export default function App({ router }: Props) {
-  // TODO: Завернуть в Error Boundary
-  return <RouterProvider router={router} />;
+export default function App() {
+  return <RouterProvider router={createBrowserRouter(routesConfig)} />;
 }

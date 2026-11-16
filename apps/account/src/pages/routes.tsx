@@ -1,14 +1,16 @@
-import { createBrowserRouter, redirect } from 'react-router';
+import { type RouteObject, redirect } from 'react-router';
+
+import { createRouterPath } from '~/utils';
 
 export const RoutePath = {
-  HOME: '/',
-  LOGIN: '/login',
-  REGISTER: '/register',
+  HOME: createRouterPath('/'),
+  LOGIN: createRouterPath('/login'),
+  REGISTER: createRouterPath('/register'),
 } as const;
 
-export const router = createBrowserRouter([
+export const routesConfig: RouteObject[] = [
   {
-    path: RoutePath.HOME,
+    index: true,
     loader: () => redirect(RoutePath.LOGIN, 301),
   },
   {
@@ -21,4 +23,5 @@ export const router = createBrowserRouter([
   },
   // TODO: Сделать `/profile` страницу
   // TODO: Добавить 404 страницу
-]);
+  // TODO: Добавить ErrorBoundary
+];
