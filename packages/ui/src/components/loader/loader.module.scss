@@ -1,0 +1,49 @@
+.loader {
+  display: grid;
+
+  &.sm {
+    grid-template-columns: repeat(3, 4px);
+    grid-template-rows: repeat(3, 4px);
+    gap: 1px;
+  }
+
+  &.md {
+    grid-template-columns: repeat(3, 8px);
+    grid-template-rows: repeat(3, 8px);
+    gap: 2px;
+  }
+
+  &.lg {
+    grid-template-columns: repeat(3, 12px);
+    grid-template-rows: repeat(3, 12px);
+    gap: 4px;
+  }
+}
+
+.square {
+  background-color: var(--bg-accent-color);
+  animation: pulse 1000ms ease-in-out infinite;
+
+  @for $i from 1 through 9 {
+    &:nth-child(6n + #{$i}) {
+      animation-delay: 100ms * $i;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.25;
+    transform: scale(0.75);
+  }
+}
