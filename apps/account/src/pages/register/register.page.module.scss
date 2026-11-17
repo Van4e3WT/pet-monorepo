@@ -40,12 +40,7 @@
 }
 
 .link {
-  text-align: center;
-  color: var(--text-accent-color);
-  transition: color ease-out 150ms;
+  @include utils.link();
 
-  &:hover {
-    color: var(--text-accent-selected-color);
-    text-decoration: none;
-  }
+  text-align: center;
 }

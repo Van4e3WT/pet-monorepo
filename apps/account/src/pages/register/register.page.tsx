@@ -23,7 +23,7 @@ export default function RegisterPage() {
           <TextField placeholder="Электронная почта" type="email" name="email" />
           <TextField placeholder="Пароль" type="password" name="password" />
           <TextField placeholder="Подтверждение пароля" type="password" name="confirmPassword" />
-          <Button type="submit" size="large">
+          <Button type="submit" size="lg">
             Регистрация
           </Button>
         </form>

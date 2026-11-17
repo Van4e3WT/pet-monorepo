@@ -22,7 +22,7 @@ export default function LoginPage() {
         <form onSubmit={handleSubmit} className={s.form}>
           <TextField placeholder="Электронная почта" type="email" name="email" />
           <TextField placeholder="Пароль" type="password" name="password" />
-          <Button type="submit" size="large">
+          <Button type="submit" size="lg">
             Вход
           </Button>
         </form>

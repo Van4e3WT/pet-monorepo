@@ -1,6 +1,8 @@
 import { routesConfig as accountRoutesConfig } from 'account/routes';
 import { redirect, type RouteObject } from 'react-router';
 
+import NotFoundPage from './not-found/not-found.page';
+
 export const RoutePath = {
   HOME: '/',
   ACCOUNT: '/account',
@@ -8,13 +10,16 @@ export const RoutePath = {
 
 export const routesConfig: RouteObject[] = [
   {
-    path: RoutePath.HOME,
+    index: true,
     loader: () => redirect(RoutePath.ACCOUNT, 301),
   },
   {
     path: RoutePath.ACCOUNT,
     children: accountRoutesConfig,
   },
-  // TODO: Добавить 404 страницу
+  {
+    path: '*',
+    Component: NotFoundPage,
+  },
   // TODO: Добавить ErrorBoundary
 ] satisfies RouteObject[];

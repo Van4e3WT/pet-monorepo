@@ -5,12 +5,12 @@ import s from './button.module.scss';
 
 export type ButtonProps = ComponentPropsWithRef<'button'> & {
   variant?: 'primary' | 'secondary';
-  size?: 'small' | 'medium' | 'large';
+  size?: 'sm' | 'md' | 'lg';
 };
 
 export function Button({
   variant = 'primary',
-  size = 'medium',
+  size = 'md',
   type = 'button',
   className,
   children,

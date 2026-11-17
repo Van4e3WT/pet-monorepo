@@ -18,19 +18,19 @@
     color: var(--text-primary-color);
   }
 
-  &.small {
+  &.sm {
     padding: utils.pxToRem(8) utils.pxToRem(16);
     border-radius: 8px;
     font-size: utils.pxToRem(14);
   }
 
-  &.medium {
+  &.md {
     padding: utils.pxToRem(10) utils.pxToRem(18);
     border-radius: 10px;
     font-size: utils.pxToRem(16);
   }
 
-  &.large {
+  &.lg {
     padding: utils.pxToRem(12) utils.pxToRem(20);
     border-radius: 12px;
     font-size: utils.pxToRem(18);
