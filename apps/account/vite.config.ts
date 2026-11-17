@@ -1,3 +1,6 @@
+import fs from 'node:fs';
+import path from 'node:path';
+
 import { federation } from '@module-federation/vite';
 import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
@@ -8,6 +11,15 @@ export default defineConfig({
     strictPort: true,
   },
   plugins: [
+    {
+      name: 'clean-mf-cache',
+      buildStart() {
+        fs.rmSync(path.resolve(import.meta.dirname, 'node_modules/.federation'), {
+          recursive: true,
+          force: true,
+        });
+      },
+    },
     react(),
     federation({
       name: 'account',
